@@ -35,6 +35,9 @@ function filterEven() {
 // REDUCE
 function findSum() {
 
+
+    
+
     let numbers = getNumbers();
 
     let sum = numbers.reduce((total, num) => total + num, 0);

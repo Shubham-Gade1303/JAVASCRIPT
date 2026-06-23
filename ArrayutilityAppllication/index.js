@@ -36,6 +36,16 @@ function filterEven() {
 function findSum() {
 
 
+
+
+
+
+
+
+
+
+
+
     
 
     let numbers = getNumbers();

@@ -1,0 +1,91 @@
+Interview Questions 
+1. What is scope in JavaScript? 
+-->  scope deterine the where variable functions and objects are accessible in program 
+    global scope
+    function scope 
+    block scpoe
+ex:-
+   // let globla = "i am globla";
+      
+
+      function test(){
+        let local = "i am local";
+        console.log(global);
+      }
+
+
+2. What is the difference between global scope and local scope? 
+---> global scope :- accessible from anywhere in the program 
+                     Exist throughtout the application lifycycle
+                     decleared outside function 
+
+    locla scope:- accessible with in the function / block where decleared
+                  Exist only in the function / block executes 
+                  decleared inside function or block 
+
+    ex:-
+        let global = "Hello";
+
+function demo() {
+  let local = "World";
+  console.log(global); // Accessible
+}
+
+console.log(global);
+// console.log(local); // Error
+
+
+
+3. What is hoisting in JavaScript? 
+--->   hoisting is the JavaScript behaviour of moving declearation to the top of their scope before execution 
+        Variable Hoisting
+            console.log(x);
+            var x = 10;
+
+        Internally:
+        var x;
+        console.log(x); // undefined
+        x = 10;
+
+    Important
+var → hoisted and initialized with undefined
+let and const → hoisted but remain in the Temporal Dead Zone (TDZ)    
+
+
+4. What is the difference between synchronous and asynchronous JavaScript? 
+-->> the difference between synchronous and asynchronous
+synchronous:- excecute code line by line 
+        console.log("A");A
+        console.log("B");B
+        console.log("C");C
+
+asynchronous:- Tasks can run later without blocking excecution 
+                console.log("A");
+                setTimeout(() => {
+                console.log("B");
+                }, 1000);
+                console.log("C"); 
+
+
+
+5. What are callbacks in JavaScript? 
+--> A callbacks is a function passed as an arguments to another function and excecute later
+    but the callbacks has drawbacks which is multiple nested callbacks can create callback hell
+        EX:---
+            function greet(name, callback) {
+            console.log("Hello " + name);
+             callback();
+            }
+
+            function bye() {
+            console.log("Goodbye");
+             }
+            greet("John", bye);
+
+            
+
+6. What are Promises in JavaScript? 
+7. What is async and await? 
+8. What is closure in JavaScript? 
+9. What is the difference between shallow copy and deep copy? 
+10. How does event handling work in JavaScript? 

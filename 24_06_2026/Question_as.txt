@@ -1,0 +1,69 @@
+1. What is the difference between function declaration and function expression? 
+-->  Function declearation is hoisted completely and can be called before defination while function expression is assinged 
+    to a variable and  can only be used after assingnment 
+
+    Function declaration:-
+                Reusable utility function 
+                functions used throughtout the application
+                better Readability
+
+                Ex:- 
+                function greet() {
+                console.log("Hello");
+                }
+
+   Function Expression:-
+                Callbackfunctions 
+                event Handles
+                IIFE (Immediately invoke functoin Expressions )
+                Dynamic function assingnment
+
+                Ex:-
+                    const greet = function() {
+                    console.log("Hello");
+                     };
+
+
+2. How does the `this` keyword work in JavaScript? 
+--> this is refers to the Immediate object that is currently executing the function its value depends on the how function 
+    is called not where it is defined
+
+    Ex:- 
+        const person = {
+        name: "Shubham",
+        display() {
+        console.log(this.name);
+        }
+    };
+        person.display();
+
+
+3. What are call(), apply(), and bind() methods? 
+-->   These methods are used to explicitly set the value of this
+
+        a) call() :-  this method are used to explicitly ste the value of this.
+            ex: -
+            function greet(city) {
+                console.log(this.name + " from " + city);
+                }
+                const person = {
+                name: "Shubham"
+                };
+                greet.call(person, "Pune");
+
+        b) apply() :- Simillar to call() , but arguments are passed as an array .
+        Ex:- greet.apply(person, ["Pune"]);
+
+        c) bind() :- the bind() method return the new function 
+        Ex:- const newFunc = greet.bind(person, "Pune");
+            newFunc();
+
+
+            
+4. What are higher-order functions? 
+5. What is event bubbling? 
+6. What is event delegation? 
+7. What are JavaScript modules? 
+8. What is the difference between localStorage and sessionStorage? 
+9. What is the difference between cookies and localStorage? 
+10. What are common JavaScript best practices?

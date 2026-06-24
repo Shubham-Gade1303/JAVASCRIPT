@@ -8,7 +8,7 @@ ex:-
    // let globla = "i am globla";
       
 
-      function test(){
+        function test(){
         let local = "i am local";
         console.log(global);
       }
@@ -202,12 +202,10 @@ asynchronous:- Tasks can run later without blocking excecution
                 console.log("button clciked");
             });
 
-
             Event Flow:-- 
                     Capturing Phases(top --> target);
                     target Phase 
                     Building Phase
-
                     element.addEventListener("click", handler, true); // Capturing
                     element.addEventListener("click", handler, false); // Bubbling
 

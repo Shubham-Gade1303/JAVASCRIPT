@@ -59,11 +59,115 @@
             newFunc();
 
 
-            
+
 4. What are higher-order functions? 
-5. What is event bubbling? 
+---> A higher oreder function is a function thatt 
+    1. takes another function as arguments
+    2.return a function
+
+        map()
+        filter()
+        reduce()
+        forEach()
+        find()
+        sort()
+
+        Benefits:- 
+        Reuse code
+        clean code 
+        functional programming supports
+
+
+
+5. What is event bubbling?
+---> Event bubbling is a machanism where an event start at the target element and propragate upword through 
+    its parent element
+    Event bubbling means an event propagates from the target element to its ancestors in the DOM hierarchy.
+
+    Ex:- Button → Div → Body → HTML → Document
+    document.getElementById("child")
+        .addEventListener("click", () => {
+            console.log("Button");
+        });
+
+        document.getElementById("parent")
+        .addEventListener("click", () => {
+            console.log("Div");
+        });
+
+
+
+
 6. What is event delegation? 
+---> Event Delegation uses a parent element to manage events for multiple child elements.
+
+        Advantages:- 
+
+        Better performance
+        Less memory consumption
+        Supports dynamically added elements
+
+        Instead of:
+        button1.addEventListener(...)
+        button2.addEventListener(...)
+        button3.addEventListener(...)
+
+        Use: - 
+        parent.addEventListener(...)
+
+
 7. What are JavaScript modules? 
+---> modulesa allow spitting code into seperate files  and importing / exporting functionality
+
+    Benefits:- 
+        code Readability
+        better maintainance 
+        Encapsulation 
+        Avoid global variables
+
+        Export:- 
+            export function add(a, b) {
+            return a + b;
+        }
+
+        import :-
+        import { add } from "./math.js";
+        console.log(add(5,3));
+
+        Default export :-
+                export default function greet() {
+                console.log("Hello");
+                }
+
+          import:- import greet from "./greet.js";
+
+
+
+
 8. What is the difference between localStorage and sessionStorage? 
+---> Both are web storage API's
+    localStorage :- Data remains even after browser restart 
+        capacity of localStorage is 5-10 MB
+        it has no expiry
+        it shared across tabs 
+        if browser restart then data reamains
+        
+        ex:- 
+
+        localStorage.setItem("name", "Shubham");
+
+    sessionStorage:- 
+        Data exist onlky while the browser tab reamains open
+        capacity of sessionStorage is 5-10 MB 
+        it will expire when web tab is close 
+        it will not shared across tabs
+        Data removed after tab close 
+
+        ex:- 
+            ocalStorage.setItem("name", "Shubham");
+
+        
+
+
 9. What is the difference between cookies and localStorage? 
 10. What are common JavaScript best practices?

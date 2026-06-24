@@ -151,7 +151,7 @@
         it has no expiry
         it shared across tabs 
         if browser restart then data reamains
-        
+
         ex:- 
 
         localStorage.setItem("name", "Shubham");
@@ -170,4 +170,35 @@
 
 
 9. What is the difference between cookies and localStorage? 
+---> Cookies are sent with every HTTP request and have limited storage, 
+    while localStorage stores larger amounts of client-side data and is not sent to the server.
+
+    cookies size is 4kb
+    sent to server
+    expiration supported 
+    slow performance
+    small storage capacity
+
+    cookies are used in Authentication 
+    session management 
+
+    localStorage are used to theme setting 
+    cart data 
+    user preferences
+
+
 10. What are common JavaScript best practices?
+---->1. use const by default
+     2. use let instaind of var
+     3. Always use Strict Equality 
+     4. keep functions small
+     5. Avoid globle variable
+     6. Handle Errors 
+     7. Use Meaingful names
+     8. use modules
+     9. follow DRY principle 
+     10.  write readable code 
+
+     JavaScript best practices include using let and cons
+     writing reusable functions, using modules,
+     and following clean coding principles.
